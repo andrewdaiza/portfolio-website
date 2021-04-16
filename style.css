@@ -53,7 +53,7 @@ h3 {
 h2 {
   margin-bottom: 2em;
 }
-h2:after {
+h3:after {
   display: block;
   height: 2px;
   background-color: #383838;
@@ -82,6 +82,25 @@ img {
 .container {
   width: min(90%, 1128px);
   margin-inline: auto;
+}
+
+.linkSkills,
+.linkSkills:visited {
+  border: 1px solid #64ffda;
+  color: #64ffda;
+  border-radius: 5px;
+  padding: 0.75rem 1.75rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.linkSkills:hover {
+  border: 1px solid #c1fff12a;
+  background: #2cffce6c;
+  outline: #64ffda;
+  cursor: pointer;
 }
 
 .split {
@@ -201,7 +220,7 @@ h3 {
   font-size: 175%;
 }
 h4 {
-  font-size: 125%;
+  font-size: 150%;
 }
 
 nav {
