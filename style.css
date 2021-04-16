@@ -70,6 +70,7 @@ section {
 img {
   display: block;
   max-width: 100%;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 40em) {
@@ -110,11 +111,17 @@ img {
   font-size: 250%;
   padding: 10px;
 }
-
-@media (max-width: 75em) {
+.project-photo {
+  width: 100%;
+  height: 150%;
+}
+.project-video {
+  width: 100%;
+  height: 150%;
+  resize: both;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 50em) {
   .split {
     flex-direction: row;
   }
@@ -134,22 +141,47 @@ img {
   ion-icon {
     font-size: 300%;
   }
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
   .project-description {
     background-color: var(--clr-primary-500);
     padding: 25px 30px;
     border-radius: 5px;
     text-align: right;
+    min-width: 100%;
+    max-height: 100%;
+    z-index: 2;
   }
   img {
     max-width: 125%;
     min-height: 100%;
   }
-  .project-details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+
+  div iframe {
+    width: 100%;
+    height: 100%;
   }
-  .project-details a {
+}
+
+@media (min-width: 62.5em) and (max-width: 75em) {
+  .project-description {
+    min-width: 125%;
+  }
+  img {
+    min-height: 100%;
+  }
+}
+@media (min-width: 50em) and (max-width: 62.5em) {
+  .project-description {
+    min-width: 150%;
+  }
+  img {
+    min-height: 150%;
+    min-width: 150%;
   }
 }
 
