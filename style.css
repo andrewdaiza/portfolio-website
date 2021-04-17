@@ -8,6 +8,10 @@
   --ff-accent: 'Roboto', sans-serif;
 }
 
+/* --------------------------------------- */
+/* -------------GLOBAL-STYLES------------- */
+/* --------------------------------------- */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -94,6 +98,60 @@ img {
   margin-bottom: 2em;
 }
 
+nav {
+  text-align: right;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+}
+
+ion-icon {
+  font-size: 150%;
+}
+
+/* --------------------------------------- */
+/* ------------RE-USABLE-STYLES----------- */
+/* --------------------------------------- */
+
+.split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-viewheight {
+  height: 100vh;
+}
+
+.container {
+  width: min(90%, 1128px);
+  margin-inline: auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icons-large {
+  font-size: 300%;
+  padding-bottom: 1em;
+}
+
+/* --------------------------------------- */
+/* --------------HERO-STYLES-------------- */
+/* --------------------------------------- */
+
 #hero {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
     url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80')
@@ -101,6 +159,7 @@ img {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
+  padding: 0px;
 }
 
 nav {
@@ -113,27 +172,13 @@ nav a {
   margin: 10px 20px;
 }
 
-.full-viewheight {
-  height: 100vh;
-}
 .hero-text {
   position: absolute;
   top: 25vh;
 }
 
-@media (min-width: 40em) {
-  section {
-    padding: 150px 0;
-  }
-}
-
-.container {
-  width: min(90%, 1128px);
-  margin-inline: auto;
-}
-
-.linkSkills,
-.linkSkills:visited {
+.hero-button,
+.hero-button:visited {
   border: 1px solid #64ffda;
   color: #64ffda;
   border-radius: 5px;
@@ -144,36 +189,27 @@ nav a {
   transition: 0.5s ease-in-out;
 }
 
-.linkSkills:hover {
+.hero-button:hover {
   border: 1px solid #c1fff12a;
   background: #2cffce6c;
   outline: #64ffda;
   cursor: pointer;
 }
 
-.split {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.skills {
+/* --------------------------------------- */
+/* --------------ABOUT-STYLES------------- */
+/* --------------------------------------- */
+
+.about-skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.skills-col {
+.about-skills-col {
   width: 150px;
 }
-.icons-large {
-  font-size: 300%;
-  padding-bottom: 1em;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+
 .project-details {
   line-height: 1;
 }
@@ -189,6 +225,10 @@ nav a {
   height: 150%;
 }
 
+/* --------------------------------------- */
+/* -------------FOOTER-STYLES------------ */
+/* --------------------------------------- */
+
 .footer {
   margin-top: 16em;
   font-size: 80%;
@@ -201,6 +241,10 @@ nav a {
   padding: 0px 10px;
 }
 
+/* --------------------------------------- */
+/* -------------MEDIA-QUERIES------------ */
+/* --------------------------------------- */
+
 @media (min-width: 50em) {
   .split {
     flex-direction: row;
@@ -211,15 +255,12 @@ nav a {
   .split > * + * {
     margin-left: 1em;
   }
-  .skills {
+  .about-skills {
     flex-direction: row;
   }
-  .skills-col {
+  .about-skills-col {
     width: 250px;
     padding: 25px;
-  }
-  ion-icon {
-    font-size: 300%;
   }
   .project-details {
     display: flex;
@@ -291,7 +332,7 @@ nav a {
     opacity: 1.4;
   }
   .narrow {
-    width: 40em;
+    width: 75%;
     margin: 0 auto;
   }
   .link-highlight:link,
@@ -331,28 +372,4 @@ nav a {
     width: 150%;
     height: 100%;
   }
-}
-
-.text-center {
-  text-align: center;
-}
-#hero {
-  padding: 0px;
-}
-
-nav {
-  text-align: right;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-  color: var(--clr-neutral-100);
-}
-
-ion-icon {
-  font-size: 150%;
 }
