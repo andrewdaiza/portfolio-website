@@ -38,7 +38,8 @@ h2 {
 }
 
 h3,
-h4 {
+h4,
+h5 {
   font-family: var(--ff-accent);
   font-weight: 900;
   line-height: 1;
@@ -55,6 +56,9 @@ h3 {
 h4 {
   font-size: 150%;
 }
+h5 {
+  font-size: 125%;
+}
 
 h1,
 h2 {
@@ -68,7 +72,7 @@ p {
 h3,
 h4 {
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 h3:after {
   display: block;
@@ -87,7 +91,7 @@ section {
 img {
   display: block;
   max-width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 #hero {
@@ -133,7 +137,7 @@ nav a {
   border: 1px solid #64ffda;
   color: #64ffda;
   border-radius: 5px;
-  padding: 0.75rem 1.75rem;
+  padding: 0.75rem 2rem;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
@@ -159,16 +163,22 @@ nav a {
   align-items: center;
 }
 .skills-col {
-  width: 200px;
+  width: 150px;
+}
+.icons-large {
+  font-size: 300%;
+  padding-bottom: 1em;
 }
 .row {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
 .project-details {
   line-height: 1;
+}
+.contact-icons {
+  justify-content: center;
 }
 .contact-icons ion-icon {
   font-size: 250%;
@@ -178,10 +188,17 @@ nav a {
   width: 100%;
   height: 150%;
 }
-.project-video {
-  width: 100%;
-  height: 150%;
-  resize: both;
+
+.footer {
+  margin-top: 16em;
+  font-size: 80%;
+}
+#contact {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.project-links ion-icon {
+  padding: 0px 10px;
 }
 
 @media (min-width: 50em) {
@@ -224,9 +241,13 @@ nav a {
     min-height: 100%;
   }
 
-  div iframe {
-    width: 100%;
+  .project-video {
+    width: 125%;
     height: 100%;
+  }
+  .project-image-div {
+    width: 691.875px;
+    height: 407.031px;
   }
   h1 {
     font-size: 400%;
@@ -258,6 +279,32 @@ nav a {
     border-bottom: 2px solid #64ffda;
     color: #64ffda;
   }
+  .project-image {
+    content: '';
+    opacity: 0.8;
+    cursor: pointer;
+    transition: transform 0.7s opacity 0.5s;
+    mix-blend-mode: screen;
+  }
+  .project-image:hover {
+    z-index: 999;
+    opacity: 1.4;
+  }
+  .narrow {
+    width: 40em;
+    margin: 0 auto;
+  }
+  .link-highlight:link,
+  .link-highlight:visited {
+    padding: 8px 0px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 90%;
+  }
+  .link-highlight:hover,
+  .link-highlight:active {
+    color: #64ffda;
+  }
 }
 
 @media (min-width: 62.5em) and (max-width: 75em) {
@@ -267,6 +314,10 @@ nav a {
   img {
     min-height: 100%;
   }
+  .project-video {
+    width: 125%;
+    height: 100%;
+  }
 }
 @media (min-width: 50em) and (max-width: 62.5em) {
   .project-description {
@@ -275,6 +326,10 @@ nav a {
   img {
     min-height: 150%;
     min-width: 150%;
+  }
+  .project-video {
+    width: 150%;
+    height: 100%;
   }
 }
 
