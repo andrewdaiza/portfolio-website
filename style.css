@@ -216,7 +216,7 @@ nav a {
 }
 
 .project-details {
-  line-height: 1;
+  line-height: 1.6;
 }
 .contact-icons {
   justify-content: center;
@@ -276,7 +276,7 @@ nav a {
   .project-description {
     background-color: var(--clr-primary-500);
     font-size: 90%;
-    padding: 25px 30px;
+    padding: 20px 30px;
     border-radius: 5px;
     text-align: right;
     min-width: 100%;
